@@ -7,7 +7,7 @@
 
 
                 <li class="nav-link">
-                    <a type="button" class="btn btn-lg " href="dashboard"   
+                    <a type="button" class="btn btn " href="dashboard"   
                      data-toggle="popover" title="dashboard " custom-class="my-popover-class" href="dashboard" 
                      data-content="some very epic content"><i class="ic fa-solid fa-chart-line"></i>
                     </a>

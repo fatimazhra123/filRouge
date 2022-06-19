@@ -56,10 +56,13 @@
                     <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce</a>
+                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
                 </li>
                 <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Offer</a>
+                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
+                </li>
+                <li class="nav-item">
+                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
                 </li>
 
                 <li class="nav-item">
@@ -96,8 +99,12 @@
     </section>
     <section>
 
+    <?php
+                  
 
-
+                  $Annonce = new AnnonceController();
+                  $Annonce->add();
+                  ?>
         <div class="shadow mb-5 rounded mt-1">
             <p class=" text-center font-weight-bold mb-5 mt-3 text-dark  " style="font-size:20px ;">vous avez le moindre problème dans le dépôt de votre annonce, n'hésitez pas à nous contacter.
             <p class=" text-center text-dark- font-weight-bold  fs-5 mb-5 mt-3  ">GRATUIT, renseignez le formulaire ci-dessous pour publier votre annonce
@@ -109,35 +116,36 @@
                 <div class="container-fluid">
                     <div class="row d-flex align-items-stretch no-gutters">
                         <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-                            <form action="addAnnonce" method="post">
+                        <form action="" method="post"   enctype="multipart/form-data">
                                 <div class="form-group">
 
-                                    <input type="text" class="form-control" name="  Username" placeholder="Votre Nome" value="<?= $_SESSION['Username']; ?>">
-
-                                </div>
-                                <div class="form-group">
-
-                                    <input type="text" class="form-control" name="Subject" placeholder="Subject" value="<?= $_SESSION['Subject']; ?>">
+                                    <input type="text" class="form-control" name="Username" placeholder="Votre Nome" value="">
 
                                 </div>
                                 <div class="form-group">
-                                    <input type="file" name="image" class="form-control" placeholder="Ajouter une photo" value="<?= $_SESSION['image']; ?>">
+
+                                    <input type="text" class="form-control" name="Subject" placeholder="Subject" value="">
 
                                 </div>
                                 <div class="form-group">
-                                    <input name="tele" id="" type="number" cols="30" rows="7" class="form-control" placeholder="Télèphone" value="<?= $_SESSION['tele']; ?>">
+                                    <input type="file" name="image" class="form-control" placeholder="Ajouter une photo" value="">
+
+                                </div>
+                                <div class="form-group">
+                                    <input name="tele" id="" type="number" class="form-control" placeholder="Télèphone" value="">
 
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea name="Message" id="" cols="30" rows="7" class="form-control" placeholder="Message" value="<?= $_SESSION['Message']; ?>">></textarea>
+                                    <textarea name="Message" id="" cols="30" rows="7" class="form-control" placeholder="Message" value=""></textarea>
                                 </div>
 
 
-
-                                <div class=" text-center" style="background-color:#f2e30b">
-                                    <button type="submit" value="Send Message" class="btn py-3 px-5" type="button" class="btn btn-primary nav-link-hover">Envoyer un message</button>
-                                </div>
+                                <div class="frm-group">
+                                <button type="submit" name="submit" class="btn btn-dark" data-bs-dismiss="modal">
+                                    Ajouter un Annonce
+                                </button>
+                            </div>
                             </form>
                         </div>
 
@@ -158,40 +166,7 @@
 
 
         </div>
-        <!-- ======= Annonce Section ======= -->
-        <div class="container">
-            <div class="d-flex flex-wrap">
-                <?php
-                $data = new  AnnonceController();
-                $Annonces = $data->getAllAnnonce();
-
-                foreach ($Annonces as $Annonce) :
-                ?>
-                    <div class="cards w-25 p-4" style="height: 300px;">
-                        <div class="text-center" style="height: 100%;">
-
-
-
-                            <form method="post" action="DetailProduct" style="height: 100%; height : 100%;">
-
-                                <input type="hidden" name="id_Annonce" value="<?php echo $Annonce['id_Annonce']; ?>">
-
-                                <button class="btn" style="width:100%; height : 90%;">
-                                    <img src="Views/assets/img/...../<?= $Annonce['image'] ?>/<?= $produit['image'] ?>" alt="prof" style="width:100%; height : 100%;">
-                                </button>
-                                <h5><?= $produit['name'] ?></h5>
-
-                            </form>
-
-
-
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <!-- END AnnonceSection -->
-
+      
         <!-- --------------------------footer---------------------------- -->
         <!-- Section: Links  -->
         <section>
@@ -291,4 +266,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html> 

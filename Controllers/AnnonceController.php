@@ -4,17 +4,17 @@ class AnnonceController
 {
 	public function getAllAnnonce()
 	{
-		$Annonce = AnnonceModel::getAll();
-		return $Annonce;
+		$annonce = AnnonceModel::getAll();
+		return $annonce;
 	}
 
-	public function addAnnonce()
+	public function add()
 	{
-		if (isset($_POST['addAnnonce'])) {
+		if (isset($_POST['submit'])) {
 			$data = array(
-                'id_Annonce' => $_POST['id_Annonce'],
-				'Usernname' => $_POST['Username'],
-				'image' => $_POST['image'],
+               
+				'Username' => $_POST['Username'],
+				'image' => $_FILES['image']['name'],
 				'Subject' => $_POST['Subject'],
 				'tele' => $_POST['tele'],
 				'Message' => $_POST['Message'],
@@ -22,16 +22,28 @@ class AnnonceController
 			);
 
 			AnnonceModel::add($data);
+			move_uploaded_file($_FILES['image']['tmp_name'],'Views/Assets/image/'.$_FILES['image']['name']);
+			
 		}
-	}
+		if (isset($_POST['submit'])) {
 
+			$_SESSION['logged'] = true;
+			
+			$_SESSION['Username'] = $data['Username'];
+			$_SESSION['image'] = $data['image'];
+			$_SESSION['Subject'] = $data['Subject'];
+			$_SESSION['tele'] = $data['tele'];
+			$_SESSION['Message'] = $data['Message'];
+			
+	}
+	}
 	public function deleteAnnonce()
 	{
 		if (isset($_POST['delete'])) {
 			$data['id_Annonce'] = $_POST['id_Annonce'];
 			$result = AnnonceModel::delete($data);
 			if ($result === 'ok') {
-				header('Location:dashboard');
+				header('Location:admin');
 			}
 		}
 	}
@@ -52,6 +64,8 @@ class AnnonceController
 			if ($result === 'ok') {
 				header('location:dashboard');
 			}
+
+			
 		}
 	}
 
@@ -63,9 +77,9 @@ class AnnonceController
 		}
 	}
 
-	// public function getOneCategorie()
-	// {
-	// 		$result = AnnonceModel::getCategorie($_GET['url']);
-	// 		return $result;
-	// }
+	public function getOneAnnonce()
+	{
+			$Annonce = AnnonceModel::getAnnonce($_GET['url']);
+			return $Annonce;
+	}
 }

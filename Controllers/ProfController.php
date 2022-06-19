@@ -27,6 +27,16 @@ class ProfController
 			// 	echo $result;
 			// }
 		}
+		if (isset($_POST['submit'])) {
+
+			$_SESSION['logged'] = true;
+			
+		
+			$_SESSION['gender'] = $data['gender'];
+			$_SESSION['matiere'] = $data['matiere'];
+	
+			
+	}
 	}
 
 	public function deleteProf()

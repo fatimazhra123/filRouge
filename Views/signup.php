@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
                                 <span class="text-muted">
                                 Je n’ai pas de compte
                                 </span>
-                                <a class="text-info text-decoration-underline" href="index"> <span>Sign-up </span></a>ici
+                                <a class="text-info text-decoration-underline" href="SignIn"> <span>Sign-up </span></a>ici
                             </div>
         </form>
       </div>

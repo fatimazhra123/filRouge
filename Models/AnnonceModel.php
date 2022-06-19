@@ -4,7 +4,7 @@ class AnnonceModel
 {
     static public function getAll()
     {
-        $stmt = DB::connexion()->prepare('SELECT * FROM Annonce');
+        $stmt = DB::connexion()->prepare('SELECT * FROM annonce');
         $stmt->execute();
 
         return $stmt->fetchAll();
@@ -12,8 +12,8 @@ class AnnonceModel
 
     static public function add($data)
     {
-        $stmt = DB::connexion()->prepare('INSERT INTO Annonce (Usernname,image,Subject,tele,Message) VALUES (:Username,:image,:Subject,:tele,:Message)');
-        $stmt->bindParam(':name', $data['Usernname']);
+        $stmt = DB::connexion()->prepare('INSERT INTO annonce(Username,image,Subject,tele,Message) VALUES (:Username,:image,:Subject,:tele,:Message)');
+        $stmt->bindParam(':Username', $data['Username']);
         $stmt->bindParam(':image', $data['image']);
         $stmt->bindParam(':Subject', $data['Subject']);
         $stmt->bindParam(':tele', $data['tele']);
@@ -25,7 +25,7 @@ class AnnonceModel
     {
         $id = $data['id_Annonce'];
         try {
-            $query = 'DELETE FROM Annonce WHERE id_Annonce=:Annonce';
+            $query = 'DELETE FROM annonce WHERE id_annonce=:id_Annonce';
             $stmt = DB::connexion()->prepare($query);
             $stmt->execute(array(":id_Annonce" => $id));
             if ($stmt->execute()) {
@@ -38,7 +38,7 @@ class AnnonceModel
 
     static public function update($data)
     {
-        $query = 'UPDATE Annonce SET username=:Username,Subject=:Subject,image=:image,tele=:tele,Message=:Message WHERE id_Annonce=:id_Annonce';
+        $query = 'UPDATE annonce SET Username=:Username,Subject=:Subject,image=:image,tele=:tele,Message=:Message WHERE id_Annonce=:id_Annonce';
         $stmt = DB::connexion()->prepare($query);
         $stmt->bindParam(':id_Annonce', $data['id_Annonce']);
         $stmt->bindParam(':Username', $data['Username']);
@@ -46,24 +46,24 @@ class AnnonceModel
         $stmt->bindParam(':image', $data['image']);
         $stmt->bindParam(':tele', $data['tele']);
         $stmt->bindParam(':Message', $data['Message']);
-        if ($stmt->execute()) {
-            return 'ok';
-        }
+       if ($stmt->execute()) {
+                return 'ok';
+            }
     }
 
     static public function getOne($id)
     {
-        $stmt = DB::connexion()->prepare("SELECT * FROM Annonce WHERE id_Annonce = '$id'");
+        $stmt = DB::connexion()->prepare("SELECT * FROM annonce WHERE id_Annonce = '$id'");
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // static public function getCategorie($categorie)
-    // {
-    //     $stmt = DB::connexion()->prepare("SELECT * FROM produit WHERE categorie = '$categorie'");
-    //     $stmt->execute();
+    static public function getAnnonce($Annonce)
+    {
+        $stmt = DB::connexion()->prepare("SELECT * FROM annonce WHERE id_Annonce = '$Annonce'");
+        $stmt->execute();
 
-    //     return $stmt->fetchAll();
-    // }
+        return $stmt->fetchAll();
+    }
 }

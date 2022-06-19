@@ -116,12 +116,12 @@ td>form>button> {
 
 .nav-link {
     color: black;
-    padding: 2px !important;
+
 }
 
 .nav-link-hover:hover {
-    /* text-decoration: underline var(--Rouge);
-color: var(--Rouge); */
+    text-decoration: underline var(--Rouge);
+color: var(--Rouge);
     color: white;
     background-color: var(--Rouge);
 }
@@ -171,6 +171,8 @@ color: var(--Rouge); */
     padding: 0px !important;
 }
 
+
+
 .navbar-fixed-top {
     background: linear-gradient(49deg, rgb(184, 183, 163) 0%, rgba(242, 245, 248, 0.994) 60%, rgba(32, 81, 116, 0.787) 100%), url(./images/1.png);
     background-repeat: no-repeat;
@@ -196,7 +198,7 @@ color: var(--Rouge); */
 }
 
 .position-a {
-    position: absolute;
+    position:center;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
@@ -273,3 +275,4 @@ color: var(--Rouge); */
 
   
 }
+/* GHJKZEDRFGHJ?KL */

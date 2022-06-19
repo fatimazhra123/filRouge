@@ -63,10 +63,13 @@ if (isset($_POST['submit'])) {
                     <a href="" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
                 </li>
                 <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce</a>
+                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
                 </li>
                 <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Offer</a>
+                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
+                </li>
+                <li class="nav-item">
+                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
                 </li>
                
                 <li class="nav-item">

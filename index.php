@@ -12,10 +12,10 @@ $pages = [
     'signup',
     'dashboard',
     'Apropos',
-   'contact',
-   'offer',
- 'Profile',
-'Deconnexion',
+    'contact',
+    'offer',
+    'Profile',
+    'Deconnexion',
     'students',
     'prof',
     'parents',
@@ -27,7 +27,12 @@ $pages = [
     'updateProf',
     'deleteStud',
     'updateStud',
-  'notificationAnnonce',
+    'deleteAnnonce',
+    'updateParent',
+    'updatteAnnonce',
+    'AnnonceStud',
+    'notificationAnnonce',
+ 
   
   
   

@@ -24,8 +24,8 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
   <?php require_once "Includes/sidebar.php"; ?>
 
   <div class="container col-10 d-flex-">
-    <div class="col">
-      <div class="row">
+    <div class="col mt-5">
+      <div class="row ml-auto p-2">
         <div class=" col-12 col-sm-6 col-md-3 py-3">
           <div class="card card1 px-3 py-3">
             <span class="bubble"><i class="fa-solid fa-user-graduate fs-5 px-3 py-3 "></i></span>
@@ -38,7 +38,7 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
         <div class=" col-12 col-sm-6 col-md-3 py-3">
           <div class="card card2 px-3 py-3">
             <span class="bubble"><i class="fa-solid fa-user-group fs-5 ps-3 py-3"></i> </span>
-            <span class="txt mt-3">Total parent</span>
+            <span class="txt mt-3">Total Annonce</span>
             <div class="card-body">
               <p class="card-text text-end"></p>
             </div>
@@ -126,10 +126,10 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
             options: {
               plugins: {
                 legend: {
-                  display: false,
+                 
                 },
                 title: {
-                  display: false,
+                
                   text: "statistics of gender",
                   color: "#2480EA",
                   fontSize: "10%"

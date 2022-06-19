@@ -1,107 +1,150 @@
+
+<?php
+if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" href="Views/Assets/image/favion.png" type="image/x-icon">
+    <link rel="stylesheet" href="Views/Assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Views/Assets/css/dashboard.css">
+    <title>Parents</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <?php require_once "Includes/navbar.php"; ?>
+        </div>
+
+
 <div class="bg-light mt-5 pt-5 d-flex flex-column align-items-center">
 
-    <div class="bienvenue border border-success mx-2 p-2 rounded w-75 d-flex flex-column align-items-center" style="background-color: #5cb874;">
+    <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#EBE645;">
+        <h2>Bienvenue Mr l'administrateur</h2>
+        <div>
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i> Ajouter Annoce</button>
+            <a    href="dashboard "  type="button" class="btn btn-secondary "><i class="fas fa-sign-out"></i> Go To dashboard</a>
+        </div>
+    </div>
+
+   
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#EBE645;width:100%">
         <h1>Bienvenue Mr l'administrateur</h1>
         <div>
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i> Ajouter Annoce</button>
-            <button type="button" class="btn btn-secondary"><i class="far fa-sign-out"></i> Se déconnecter</button>
+            <a    href="dashboard "  type="button" class="btn btn-secondary "><i class="fas fa-sign-out"></i> Go To dashboard</a>
         </div>
     </div>
 
-    <!-- Modal Ajout Produit-->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Entres tous les annonces</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-
-                    <div class="bg-light mt-5 pt-5 d-flex flex-column align-items-center">
-                        <div class="bienvenue w-50">
-                            <div class="border border-success mb-2 p-2 rounded d-flex flex-column align-items-center">
-                                <h1>Bonjour <?= $_SESSION['Username']; ?></h1>
-                                <div>
-                                    <button type="button" class="btn btn-warning"><a href="dashboard" class="text-white">Passer dans plateforme cours soutien</a></button>
-                                    <button type="button" class="btn btn-muted text-white btn-hover text-white"><a href="Deconnexion" <i class="far fa-sign-out"></i> Se déconnecter</a></button>
-                                </div>
-                            </div>
-                            <div class="border border-dark mb-2 p-2 rounded">
-                                <h2>Détails du compte</h2>
-                                <div>
-                                    <p><b>Email :</b> <?= $_SESSION['image']; ?>"></p>
-                                    <p><b>Username:</b><?= $_SESSION['Username']; ?>"></p>
-                                    <p><b>Subject :</b><?= $_SESSION['Subject']; ?>"></p>
-                                    <p><b> NUméreo de Télèphone :</b> <?= $_SESSION['tele']; ?></p>
-                                    <p><b>Message :</b> <?= $_SESSION['Message']; ?>"></p>
-
-                                </div>
-                            </div>
-                        </div>
+   
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Entrer les infos du Annoce</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <?php
-                    include_once "Controllers/ProduitController.php";
-                    include_once "Models/ProduitModel.php";
+                    <div class="modal-body">
+                    <form action="" method="post"   enctype="multipart/form-data">
+                                <div class="form-group">
 
-                    $add = new AnnonceController();
-                    $add->addAnnonce();
-                    ?>
-                </div>
+                                    <input type="text" class="form-control" name="Username" placeholder="Votre Nome" value="">
+
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" name="Subject" placeholder="Subject" value="">
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="file" name="image" class="form-control" placeholder="Ajouter une photo" value="">
+
+                                </div>
+                                <div class="form-group">
+                                    <input name="tele" id="" type="number" class="form-control" placeholder="Télèphone" value="">
+
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea name="Message" id="" cols="30" rows="7" class="form-control" placeholder="Message" value=""></textarea>
+                                </div>
+
+
+                                <div class="modal-footer">
+                                <button type="submit" name="submit" class="btn btn-dark" data-bs-dismiss="modal">
+                                    Ajouter un Annonce
+                                </button>
+                            </div>
+                            </form>
+                       
             </div>
         </div>
     </div>
+</div>
+    <?php
+                  
 
-    <div class="tables d-flex w-100 m-2 p-2">
+                  $Annonce = new AnnonceController();
+                  $Annonce->add();
+                  ?>
+                   <h2 class="text-secondary  mt-5">Détaille des annonce<u></u></h2>
+                 
+        <div class="table1 border border-success m-2 p-2 rounded w-100 mt-2 bg-light">
+        <div class="table-responsive">
+            <table class="table table-striped table  table-hover">
 
-        <div class="table1 border border-success m-2 p-2 rounded w-100">
-            <h2 class="text-secondary"><u>Listes des produits</u></h2>
             <div>
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col"></th>
+                            <!-- <th scope="col">id-Annonce</th> -->
                             <th scope="col">img</th>
                             <th scope="col">Nom</th>
                             <th scope="col">Subject</th>
                             <th scope="col"> Télèphone</th>
                             <th scope="col">Message</th>
+                            <th scope="col">Action</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <?php
-                            include_once "Controllers/ProduitController.php";
-                            include_once "Models/ProduitModel.php";
+                           
 
                             $data = new AnnonceController();
-                            $produits = $data->getAllAnnonce();
+                            $Annonces = $data->getAllAnnonce();
 
                             foreach ($Annonces as $Annonce) :
                             ?>
                         <tr>
-                            <td><?= $produit['id'] ?></td>
-                            <td><img src="Views/assets/img/......./<?= $Annonce['Username'] ?>/<?= $Annonce['image'] ?>" style="width: 80px; height : 80px;" alt="productPicture"></td>
-                            <td><?= $produit['Username'] ?></td>
-                            <td><?= $produit['Subject'] ?> Dh</td>
-                            <td><?= $produit['description'] ?></td>
-                            <td><?= $produit['tele'] ?></td>
-                            <td><?= $produit['Message'] ?></td>
-                            <td></td>
+                            <!-- <td><?= $Annonce['id_Annonce'] ?></td> -->
+                            <td><img src="Views/Assets/image/<?= $Annonce['image'];?>" style="width: 80px; height : 80px; align-items-center" alt="image"></td>
+                            <td><?= $Annonce['Username'] ?></td>
+                            <td><?= $Annonce['Subject'] ?></td>
+                            <td><?= $Annonce['tele'] ?></td>
+                            <td><?= $Annonce['Message'] ?></td>
                             <td>
-                                <form method="post" class="mr-1" action="updateProduit">
-                                    <input type="hidden" name="id_Annonce" value="<?php echo $produit['id_Annonce']; ?>">
+                                <form method="post" class="mr-1" action="updatteAnnonce">
+                                    <input type="hidden" name="id_Annonce" value="<?php echo $Annonce['id_Annonce']; ?>">
                                     <button type="submit" name="update" class="border border-0 ">
-                                        <i class="far fa-edit text-primary"></i>
+                                        <i class="fas fa-edit text-primary"></i>
                                     </button>
                                 </form>
                             </td>
                             <td>
-                                <form method="post" class="mr-1" action="deleteProduit">
-                                    <input type="hidden" name="id_produit" value="<?php echo $produit['id_Annonce']; ?>">
+                                <form method="post" class="mr-1" action="deleteAnnonce">
+                                    <input type="hidden" name="id_Annonce" value="<?php echo['id_Annonce']; ?>">
                                     <button type="submit" name="delete" class="border border-0">
-                                        <i class="fal fa-trash text-danger"></i>
+                                        <i class="fas fa-trash text-danger"></i>
                                     </button>
                                 </form>
                             </td>
@@ -112,4 +155,15 @@
             </div>
         </div>
     </div>
-</div>
+
+  <!-- SCRIPT -->
+  <script src="./Script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
+<?php } else {
+  
+   
+  header ("location:homecours");
+}
