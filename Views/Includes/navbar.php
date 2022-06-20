@@ -4,9 +4,9 @@
         <div class="nvb d-flex md-1 ">
             <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" alt="" style="width:66px;">
             <i class="fa-solid fa-bars humberguer text-dark ms-1"></i>
-            <form class="input-icons " style=" align-items:start; color:black;border:black">
-                <i class="fa-solid fa-magnifying-glass icon"></i>
-                <input class="input-field search form-control w-100 me-2 rounded-pill justify-self-start text-" type="search" placeholder="Search" aria-label="Search">
+            <form method="post"  class="input-icons " style=" align-items:start; color:black;border:black">
+                <button name="recherch" class="border-0" type="submit"><i class="fa-solid fa-magnifying-glass icon"></i></button>
+                <input class="input-field search form-control w-100 me-2 rounded-pill justify-self-start text-"   name="recherche"  type="text" placeholder="Search" aria-label="Search">
                 
             </form>
         </div>

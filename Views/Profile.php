@@ -87,12 +87,12 @@
         </div>
         </div>
     </nav>
-<div class="bg-light mt-5 pt-5 d-flex flex-column align-items-center">
+<div class=" mt-5 pt-5 d-flex flex-column align-items-center">
     <div class="bienvenue w-50">
         <div class="border border-success mb-2 p-2 rounded d-flex flex-column align-items-center">
             <h1>Bonjour <?= $_SESSION['Username']; ?></h1>
             <div>
-                <button type="button" class="btn btn-warning"><a href="dashboard" class="text-white">Passer dans plateforme cours soutien</a></button>
+                <button type="button" class="btn btn-warning"><a href="AnnonceStud" class="text-white">Passer dans plateforme cours soutien</a></button>
                 <button type="button" class="btn btn-muted text-white btn-hover text-white"><a href="Deconnexion"<i class="far fa-sign-out"></i> Se déconnecter</a></button>
             </div>
         </div>

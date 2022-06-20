@@ -41,7 +41,7 @@ class AnnonceController
 	{
 		if (isset($_POST['delete'])) {
 			$data['id_Annonce'] = $_POST['id_Annonce'];
-			$result = AnnonceModel::delete($data);
+			$result = AnnonceModel::delete('id_Annonce');
 			if ($result === 'ok') {
 				header('Location:admin');
 			}

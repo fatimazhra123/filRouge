@@ -1,6 +1,11 @@
 <?php
+if(isset($_POST['recherche'])){
+    $data = new étudiantsController();
+    $result = $data-> rechercheName();
+  }else{
 $data = new étudiantsController();
 $étudiants = $data->getAllétudiants();
+  }
 if (isset($_POST['submit'])) {
     $étudiant = $data->addétudiant();
     print_r($étudiant);

@@ -74,5 +74,23 @@ class étudiants
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    static public function SershName($data){
+        $recherche = $data['recherche'];
+        // die(print_r($data));
+        
+        try{
+            $query='SELECT * FROM étudiants  WHERE Nom_complet LIKE ?';
+            $stmt = DB::connexion()->prepare($query);
+            $stmt->execute(array('%'.$recherche.'%'));
+            $result = $stmt->fetchAll();
+             return $result;
+
+        }catch(PDOException $ex){  //pour afficher les erreur
+         echo'erreur' . $ex->getMessage();
+        }
+      }
+
+
 }
 

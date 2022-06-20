@@ -81,7 +81,13 @@ class étudiantsController
 		}
 	}
 
-
+	public function rechercheName(){
+		if(isset($_POST['recherche'])){
+			$data = array('recherche' => $_POST['recherche']);
+		}
+		$result= étudiants::SershName($data);
+		return $result;
+	}
 
 }
 
