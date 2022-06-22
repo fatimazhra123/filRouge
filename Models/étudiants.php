@@ -92,5 +92,14 @@ class étudiants
       }
 
 
+
+      
+    static public function CountAll(){
+        $stmt = DB::connexion()->prepare('SELECT count(*) FROM étudiants');
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+
 }
 

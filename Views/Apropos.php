@@ -44,6 +44,10 @@
                     </div>
                 </div>
             </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="bi bi-list"></i></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
@@ -75,17 +79,18 @@
                     <a class="dropdown-item text-warning fs-6" href="home-cours">Home</a>
                 </div>
             </div>
+            </div>
         </div>
         </div>
     </nav>
     <!-- end nav -->
 
-    <div class="container mt-5 mb-5 ">
+    <div class="container mt-5 mb-5 border border-dark ">
 
         <div class="card">
             <div class="row g-2">
 
-                <div class="col-md-4">
+                <div class="col-md-4  border border-dark">
 
                     <div class="p-3 text-center border-end">
 
@@ -105,7 +110,7 @@
 
                 </div>
 
-                <div class=" réserve col-md-8">
+                <div class=" réserve col-md-8 ">
 
                     <div class="p-3">
 
@@ -322,6 +327,9 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 </body>
 

@@ -1,4 +1,4 @@
-<section class="navbar fixed-top ">
+<section class="navbar fixed-top  ">
     <div class=" container-fluid">
 
         <div class="nvb d-flex md-1 ">

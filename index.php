@@ -32,6 +32,7 @@ $pages = [
     'updatteAnnonce',
     'AnnonceStud',
     'notificationAnnonce',
+  'navbardestroy',
  
   
   

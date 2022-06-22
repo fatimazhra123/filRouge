@@ -44,7 +44,7 @@ class ProfController
 		if (isset($_POST['delete'])) {
 			$data['id_prof'] = $_POST['id_prof'];
 			$result = Prof::delete($data);
-			if ($result === 'ok') {
+			if ($result === ' Etudiant has been Delete in the list') {
 				header('Location:prof');
 			}
 		}
@@ -62,7 +62,7 @@ class ProfController
 				'phone' => $_POST['phone'],
 			);
 			$result = Prof::update($data);
-			if($result === 'ok'){
+			if($result === 'An Etudiant has been Update in the list'){
 				header('location:prof');
 			}
 			// if ($result === 'ok') {
@@ -79,4 +79,14 @@ class ProfController
 			return $result;
 		}
 	}
+
+
+
+
+    public function CountAllProfs(){  
+        $prof = prof::CountAll();
+        return $prof; 
+    }
+  
+  
 }

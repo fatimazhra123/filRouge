@@ -1,10 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap%27");
 
-* {
-    margin: 0;
-    padding: 0;
-}
+
 
 *{
     padding:0;
@@ -42,7 +39,7 @@ body{
 
 .card4 {
     background-color: #F358E9;
-
+  
 
 }
 
@@ -65,8 +62,8 @@ body{
     z-index: 1060;
     height: 100vh;
     width: 15vw;
-    padding: 10px 14px;
-    top: 65px;
+    padding: 5px;
+    top: 85px;
     background: linear-gradient(49deg, rgb(237, 218, 11) 0%, rgba(242, 245, 248, 0.994) 60%, rgba(32, 81, 116, 0.787) 100%), url(./images/1.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -233,5 +230,20 @@ ul {
     text-align: center;
 }
 
+@media (max-width: 716px) {
+    .sidebar {
+    top: 150px;
+    width: 10vw;
 
+        
+    }
 
+    @media (max-width: 400px) {
+        .sidebar {
+        
+          
+            background-size: 100% 100%; 
+            background-color: white;   
+        }
+}
+}

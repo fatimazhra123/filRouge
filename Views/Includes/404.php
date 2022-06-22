@@ -13,7 +13,7 @@
     <title>404</title>
 </head>
 
-<body style="background:#C6DCE4;">
+<body style="background-color:#B0C8E2;">
     <div>
        
 
@@ -309,9 +309,9 @@
                     </svg>
                 </div>
                 <div>
-                    <h3>Cette page n'existe pas !</h3>
+                    <h1>Cette page n'existe pas !</h1>
                     <a href="homecours"> 
-                        <button class="btn btn-warning font-weight-bold btn-hover"> 
+                        <button class="btn btn-light  btn-hover" style="font-weight:bold;color:#B0C8E2;">
                             GO BACK TO PAGE D'ACCEUIL
                         </button>
                     </a>
@@ -319,6 +319,7 @@
             </div>
         </div>
     </div>
+    
 </body>
 
 </html>

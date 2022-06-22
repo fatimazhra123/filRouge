@@ -31,60 +31,7 @@
 <body class="Annonce">
 
     <!-- start navbar -->
-    <nav class="navbar  navbar-fixed-top navbar-expand-lg  shadow  bg-body rounded py-1" style="backdrop-filter: blur(14px);">
-        <div class="container-fluid">
-            <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" style="width: 80px;" alt="le logo" class="logo-navbar">
-            <button class="navbar-toggler " style="color:black;" type="button" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="color:black;"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <div class="navbar-collapse-header">
-
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
-                </li>
-                <li class="nav-item">
-                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
-                </li>
-                <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="contact" class="nav-link nav-link-icon  ml-2 mr-5 nav-link-hover">Contact </a>
-                </li>
-            </ul>
-
-            <div class="dropdown show">
-                <a class="btn btn- dropdown-toggle text-warning fs-6 bg-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    INSCRIPTION
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item text-warning fs-6" href="SignIn">Sign-in</a>
-                    <a class="dropdown-item text-warning fs-6" href="Annonce">Donner des cours</a>
-                </div>
-            </div>
-
-
-        </div>
-        </div>
-    </nav>
+    <?php require_once "Includes/navbardestroy.php"; ?>
     <!-- end nav -->
     <!-- <section class="hero-wrap hero-wrap-2  p-4" style="background-image: url('Views/Assets/image/bg_1.jpg');"> -->
     <div class="logo bg-white"></div>
@@ -115,34 +62,36 @@
             <section>
                 <div class="container-fluid">
                     <div class="row d-flex align-items-stretch no-gutters">
-                        <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+                        <div class="col-md-6 p-4 p-md-5 order-md-last bg-light  border border-dark">
+
+                        <h1 class="text-center font-weight-bold mb-5 mt-3">Annonce</h1>
                         <form action="" method="post"   enctype="multipart/form-data">
-                                <div class="form-group">
+                                <div class="form-group  border border-dark">
 
                                     <input type="text" class="form-control" name="Username" placeholder="Votre Nome" value="">
 
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group  border border-dark">
 
                                     <input type="text" class="form-control" name="Subject" placeholder="Subject" value="">
 
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group  border border-dark">
                                     <input type="file" name="image" class="form-control" placeholder="Ajouter une photo" value="">
 
                                 </div>
-                                <div class="form-group">
-                                    <input name="tele" id="" type="number" class="form-control" placeholder="Télèphone" value="">
+                                <div class="form-group  border border-dark">
+                                    <input name="tele" type="number" class="form-control" placeholder="Télèphone" value="">
 
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group border border-dark">
                                     <textarea name="Message" id="" cols="30" rows="7" class="form-control" placeholder="Message" value=""></textarea>
                                 </div>
 
 
-                                <div class="frm-group">
-                                <button type="submit" name="submit" class="btn btn-dark" data-bs-dismiss="modal">
+                                <div class="frm-group ">
+                                <button type="submit" name="submit" class="btn btn-dark justify-content-center" data-bs-dismiss="modal">
                                     Ajouter un Annonce
                                 </button>
                             </div>
@@ -264,6 +213,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html> 

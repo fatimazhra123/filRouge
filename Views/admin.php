@@ -22,12 +22,13 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
     <div>
         <div>
             <?php require_once "Includes/navbar.php"; ?>
+            <?php require_once "Includes/sidebar.php"; ?>
         </div>
 
 
 <div class="bg-light mt-5 pt-5 d-flex flex-column align-items-center">
 
-    <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#EBE645;">
+    <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " class="d-none md-bg"  style="background-color:#B0C8E2;">
         <h2>Bienvenue Mr l'administrateur</h2>
         <div>
             <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i> Ajouter Annoce</button>
@@ -39,13 +40,7 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#EBE645;width:100%">
-        <h1>Bienvenue Mr l'administrateur</h1>
-        <div>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i> Ajouter Annoce</button>
-            <a    href="dashboard "  type="button" class="btn btn-secondary "><i class="fas fa-sign-out"></i> Go To dashboard</a>
-        </div>
-    </div>
+       
 
    
                     <div class="modal-header">
@@ -97,22 +92,18 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
                   ?>
                    <h2 class="text-secondary  mt-5">Détaille des annonce<u></u></h2>
                  
-        <div class="table1 border border-success m-2 p-2 rounded w-100 mt-2 bg-light">
-        <div class="table-responsive">
+                   <div class=" prof table-responsive" style="width:85%;margin-left:15%">
             <table class="table table-striped table  table-hover">
-
-            <div>
-                <table class="table">
-                    <thead>
+                        <thead>
                         <tr>
                             <!-- <th scope="col">id-Annonce</th> -->
-                            <th scope="col">img</th>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Subject</th>
-                            <th scope="col"> Télèphone</th>
-                            <th scope="col">Message</th>
-                            <th scope="col">Action</th>
-                            <th scope="col"></th>
+                            <th >image<i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th>Nom <i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th >Subject<i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th > Télèphone<i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th >Message<i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th >Action<i class="fas fa-sort fs-4 ms-auto"></i></th>
+                            <th ></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -153,7 +144,7 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
                     </tbody>
                 </table>
             </div>
-        </div>
+        
     </div>
 
   <!-- SCRIPT -->

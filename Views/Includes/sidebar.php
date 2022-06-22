@@ -1,4 +1,4 @@
-<nav class="sidebar close d-flex align-items-center border">
+<nav class="sidebar close d-flex align-items-center  border-none">
     <div class="menu-bar">
         <div class="menu">
             <ul class="menu-links align-items-center">

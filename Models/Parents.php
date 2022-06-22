@@ -57,4 +57,21 @@ class Parents
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+
+
+    
+
+
+
+    static public function CountFemme(){
+        $stmt = DB::connexion()->prepare("SELECT count(*) FROM parents WHERE Genre='Femme'");
+        $stmt->execute();
+        return $stmt->fetch();
+      }
+      static public function CountHomme(){
+        $stmt = DB::connexion()->prepare("SELECT count(*) FROM parents WHERE Genre='Homme'");
+        $stmt->execute();
+        return $stmt->fetch();
+      }
 }

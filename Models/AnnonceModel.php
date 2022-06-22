@@ -66,4 +66,14 @@ class AnnonceModel
 
         return $stmt->fetchAll();
     }
+
+
+
+      
+    static public function CountAll(){
+        $stmt = DB::connexion()->prepare('SELECT count(*) FROM annonce');
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
 }

@@ -89,5 +89,12 @@ class étudiantsController
 		return $result;
 	}
 
+	public function CountAllEtds(){  
+		$etd = étudiants::CountAll();
+		return $etd; 
+	  }
+
+
+	
 }
 

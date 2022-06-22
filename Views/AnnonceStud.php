@@ -31,64 +31,12 @@
 <body class="réserve index-page">
 
     <!-- start navbar -->
-    <nav class="navbar  navbar-fixed-top navbar-expand-lg  shadow  bg-body rounded py-1" style="backdrop-filter: blur(14px);">
-        <div class="container-fluid">
-            <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" style="width: 80px;" alt="le logo" class="logo-navbar">
-            <button class="navbar-toggler " style="color:black;" type="button" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="color:black;"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <div class="navbar-collapse-header">
-
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
-                </li>
-                <li class="nav-item">
-                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
-                </li>
-                <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="contact" class="nav-link nav-link-icon  ml-2 mr-5 nav-link-hover">Contact </a>
-                </li>
-            </ul>
-
-            <div class="dropdown show">
-                <a class="btn btn- dropdown-toggle text-warning fs-6 bg-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    INSCRIPTION
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item text-warning fs-6" href="SignIn">Sign-in</a>
-                    <a class="dropdown-item text-warning fs-6" href="Annonce">Donner des cours</a>
-                </div>
-            </div>
-
-
-        </div>
-        </div>
-    </nav>
+    <?php require_once "Includes/navbardestroy.php"; ?>
+    
     <!-- end nav -->
     <div class="bg-white pt-5 d-flex flex-column align-items-center">
 
-        <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#EBE645;">
+        <div class="bienvenue border border-secondary   pt-5   p-2 rounded w-75 d-flex flex-column align-items-center mt-1 " style="background-color:#B0C8E2;">
             <h2>Bienvenue,l'étudiant</h2>
             <div>
                 <a  href="offer"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i>INSCRIPTION</button></a>
@@ -125,11 +73,11 @@
 
                         foreach ($Annonce as $Annonce) {
                         ?>
-                            <div class="cards  w-30 p-2" style="height: 300px; background:#F1EEE9 " >
+                            <div class="cards bg-white rounded-top  w-30 p-2" style="height: 300px;" >
                                 <div class="text-center" style="height: 100%;">
                                     <form method="post" action="" style="height: 70%; height : 70%;">
                                         <input type="hidden" name="id_Annonce" value="<?php echo $Annonce['id_Annonce']; ?>">
-                                        <button class="btn border border-dark bg-light" style="width:100%; height : 90%;">
+                                        <button class="btn border border-dark " style="width:100%; height : 90%; background:#B0C8E2 " ">
                                             <img  class="border border-dark font-weight-bold"    src="Views/assets/image//<?= $Annonce['image'] ?>" alt="Annonce" style="width:80%; height : 80%;">
                                             <div class="text-dark font-weight-bold" >   <?= $Annonce['Username'] ?></div>
                                             <div class="justify-content-between text-dark font-weight-bold"><p><b>Subject</b> <?=$Annonce['Subject']; ?></p>
@@ -173,6 +121,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

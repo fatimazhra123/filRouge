@@ -58,4 +58,14 @@ class Prof
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
+
+
+    
+    static public function CountAll(){
+        $stmt = DB::connexion()->prepare('SELECT count(*) FROM proffesseurs');
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
 }

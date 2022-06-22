@@ -1,5 +1,14 @@
 <?php
 if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
+ $data=new étudiantsController();
+ $nbrEtds=$data->CountAllEtds();
+
+
+ $data=new ProfController();
+ $nbrProfs=$data->CountAllProfs();
+
+ $data=new AnnonceController();
+ $nbrAnnonce=$data->CountAllAnnonce();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,30 +36,30 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
     <div class="col mt-5">
       <div class="row ml-auto p-2">
         <div class=" col-12 col-sm-6 col-md-3 py-3">
-          <div class="card card1 px-3 py-3">
+          <div class="card card1 px-3 py-2">
             <span class="bubble"><i class="fa-solid fa-user-graduate fs-5 px-3 py-3 "></i></span>
             <span class="txt mt-3">Total Students</span>
             <div class="card-body">
-              <p class="card-text text-end"></p>
+              <p class="card-text text-end "><?php echo $nbrEtds[0] ?></p>
             </div>
           </div>
         </div>
         <div class=" col-12 col-sm-6 col-md-3 py-3">
-          <div class="card card2 px-3 py-3">
+          <div class="card card2 px-3 py-2">
             <span class="bubble"><i class="fa-solid fa-user-group fs-5 ps-3 py-3"></i> </span>
             <span class="txt mt-3">Total Annonce</span>
             <div class="card-body">
-              <p class="card-text text-end"></p>
+              <p class="card-text text-end"><?php echo $nbrAnnonce[0] ?></p>
             </div>
           </div>
         </div>
         <div class=" col-12 col-sm-6 col-md-3 py-3">
-          <div class="card card3 px-3 py-3">
+          <div class="card card3 px-3 py-2">
             <span class="bubble"><i class="fa-solid fa-user fs-5 px-3 py-3"></i></span>
 
             <span class="txt mt-3">Total profs</a></span>
             <div class="card-body">
-              <p class="card-text text-end"></p>
+              <p class="card-text text-end text-end"><?php echo $nbrProfs[0] ?></p>
             </div>
           </div>
         </div>

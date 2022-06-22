@@ -59,6 +59,7 @@ class UsersController{
 				}
 				
 			} else {
+				session_name()::set('error', 'Email ou mot de passe incorrect');
                 header ("location:SignIn");
                 
 			

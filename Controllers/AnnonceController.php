@@ -82,4 +82,18 @@ class AnnonceController
 			$Annonce = AnnonceModel::getAnnonce($_GET['url']);
 			return $Annonce;
 	}
+
+
+
+	public function CountAllAnnonce(){  
+		$Annonce =AnnonceModel::CountAll();
+		return $Annonce; 
+	  }
+
+	  public function CountAllProfs(){  
+        $prof = prof::CountAll();
+        return $prof; 
+    }
+  
+
 }

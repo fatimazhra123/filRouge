@@ -28,7 +28,8 @@
     </title>
 </head>
 
-<body class="réserve">
+<body class="réserve index-page"  >
+
 
     <!-- start navbar -->
     <nav class="navbar  navbar-fixed-top navbar-expand-lg  shadow  bg-body rounded py-1" style="backdrop-filter: blur(14px);">
@@ -48,6 +49,10 @@
                     </div>
                 </div>
             </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="bi bi-list"></i></i></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
@@ -81,16 +86,17 @@
                 </div>
             </div>
 
-
+            </div>
         </div>
         </div>
     </nav>
     <!-- end nav -->
 
 
-    <section>
-        <div class=" container main d-flex flex-row justify-content-between flex-md-row flex-lg-row mb-5  mt-5 ">
-            <div class="first-section container animate__animated  animate__backInLeft" style="margin-top: 80px;">
+    <section class="container ">
+    <div class=" g-2">
+        <div class=" container main d-flex flex-column flex-lg-row justify-content-center mb-5  mt-5 ">
+            <div class=" col-12 col-lg-6 first-section container animate__animated  animate__backInLeft text-center" style="margin-top: 80px;">
                 <h3 class="display-3 first-title-index " style="line-height: 1;">Trouvez</h3>
                 <h3 class="display-3 " style="line-height: 1;"> le
                     professeur parfait</h3>
@@ -104,23 +110,23 @@
                 </a>
             </div>
 
-            <div class="second-section animate__animated  animate__fadeInRight">
-                <img src="Views/Assets/image/Teaching-cuate.png" style="width: 400px;" alt="personnes qui donne du sang">
+            <div class="second-section animate__animated  animate__fadeInRight col-12 col-lg-3 d-flex">
+                <img src="Views/Assets/image/Teaching-cuate.png" style="width: 300px;" alt="personnes qui donne du sang" class="">
             </div>
         </div>
+</div>
+    </section
 
-    </section>
 
 
-
-    <section class="section-cards cards container bg-light rounded mt-5 shadow p-3 mb-5 bg-body rounded mb-5">
+    <section class=" container section-cards cards container bg-light rounded mt-5 shadow p-3 mb-5 bg-body rounded mb-5">
         <div class="title-cards d-flex justify-content-center">
             <h3 class="display-3 mt-3 text-dark">cours soutien
             </h3>
         </div>
-        <div class=" container  d-flex flex-row  justify-content-around  mb-5  ">
+        <div class=" container  d-flex md-flex-row justify-content-around  mb-5  ">
             <div class="first-card text-center p-3 mb-3 mt-3  rounded ">
-                <img src="Views/Assets/image/search.png" class="mx-auto d-block " style="width: 142px;" alt="img">
+                <img src="Views/Assets/image/search.png" class="mx-auto d-block " style="width: 132px;" alt="img">
                 <h3 class="heading mb-0 mt-2 mb-3">1. Recherchez
                 </h3>
                 <p class="text-muted mb-0 mt-2 mb-2 px-1" style="font-size: 11px;">Consultez librement les profils et contactez votre fantastique professeur selon vos critères (tarifs, diplôme, avis, cours à domicile ou par webcam).
@@ -132,7 +138,7 @@
 
             </div>
             <div class="first-card text-center  p-3 mb-3 mt-2  rounded">
-                <img src="Views/Assets/image/customer-service.png" class="mx-auto d-block " style="width: 142px;" alt="img">
+                <img src="Views/Assets/image/customer-service.png" class="mx-auto d-block " style="width: 132px;" alt="img">
                 <h3 class="heading mb-0 mt-2 mb-3">2. Contactez
 
                 </h3>
@@ -143,7 +149,7 @@
                 </div>
             </div>
             <div class="first-card text-center  p-3 mb-3 mt-4  rounded">
-                <img src="Views/Assets/image/notebook.png" class="mx-auto d-block " style="width: 142px;" alt="img">
+                <img src="Views/Assets/image/notebook.png" class="mx-auto d-block " style="width: 132px;" alt="img">
                 <h3 class="heading mb-0 mt-2 mb-3 ">3. Organisez
                 </h3>
                 <p class="text-muted mb-0 mt-2 mb-2 px-1" style="font-size: 11px; ">programmez vos cours simplement depuis votre messagerie avec votre professeur ou votre coach.</p>
@@ -158,28 +164,29 @@
 
     <section class="textandimage ">
         <div class="d-flex flex-row  container mb-5 ">
-            <div class="card container shadow mr-4  bg-body rounded mb-5">
-                <img class="card-img-top" src="Views/Assets/image/OIP.jpg" alt="Card image cap ">
+            <div class="card container justify-content-center shadow mr-4  bg-body rounded mb-5">
+                <img class="card-img-top" src="Views/Assets/image/bg_2.jpg" alt="Card image cap ">
                 <div class="card-body ">
                     <h4 class="card-title ">Élève et professeur,</h4>
                     <p class="card-text ">Élève et professeur,
                         l'alchimie parfaite
                         "COURS SUPPLEMENTAIRES est la plateforme qui a permis à mes deux enfants de se développer, de s'investir et d'avoir confiance en eux."
                     </p>
-                    <a href="contact " class="btn button-d-card ">Contactez-nous</a>
+                    <a><button  href="service" type="button" class="btn btn bg-light " style="justify-content:center;">Voir les Professeurs disponible</button></a>
                 </div>
             </div>
-            <div class="card container shadow mb-5 bg-body rounded mb-5 ">
-                <img class="card-img-top " src="Views/Assets/image/common-core-standards_small-300x200.jpg" alt="Card image cap ">
+            <div class="card container justify-content-center shadow mr-4  bg-body rounded mb-5">
+                <img class="card-img-top" src="Views/Assets/image/bg_3.jpg" alt="Card image cap ">
                 <div class="card-body ">
-                    <h4 class="card-title ">Objectifs garantis!
-                    </h4>
-                    <p class="card-text ">un site qui s’adresse à tous les niveaux, Nous nous chargeons de la pré-sélection. Vous n'avez plus qu'à vous concentrer sur vos objectifs.</p>
-                    <a href="service " class="btn button-d-card ">Voir les Professeurs disponible</a>
+                    <h4 class="card-title ">Objectifs garantis!</h4>
+                    <p class="card-text ">cours supllémentaires,
+                    un site qui s’adresse à tous les niveaux, Nous nous chargeons de la pré-sélection.la plateforme qui a permis à mes deux enfants de se développer concentrer sur vos objectifs.</p>
+                 
+                    <a><button  href="service" type="button" class="btn btn bg-light " style="justify-content:center;">Voir les Professeurs disponible</button></a>
                 </div>
             </div>
-        </div>
     </section>
+   
     <!-- --------------------------footer---------------------------- -->
     <!-- Section: Links  -->
     <section>
@@ -277,6 +284,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
