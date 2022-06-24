@@ -192,7 +192,7 @@
 
         <!-- Copyright -->
         <div class="text-center p-1 " style="background-color:var(--Rouge); ">
-            <small class="text-uppercase text-white  ">©Blood Donation 2022</small>
+            <small class="text-uppercase text-white  ">©cours sup 2022</small>
         </div>
         <!-- Copyright -->
         </footer>

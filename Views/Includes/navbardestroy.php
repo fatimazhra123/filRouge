@@ -21,25 +21,7 @@
           </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
-                </li>
-                <li class="nav-item">
-                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
-                </li>
-                <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
-                </li>
              
-                <li class="nav-item">
-                    <a href="contact" class="nav-link nav-link-icon  ml-2 mr-5 nav-link-hover">Contact </a>
-                </li>
             </ul>
             </div>
             <div>

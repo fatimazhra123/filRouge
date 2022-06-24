@@ -37,9 +37,12 @@ if (isset($_POST['submit'])) {
 
 <body class="index-page">
 
-    <!-- start navbar -->
-    <?php require_once "Includes/navbardestroy.php"; ?>
+ <!-- start navbar -->
+ <?php require_once "Includes/navbardestroy.php"; ?>
     <!-- end nav -->
+    
+  
+   
 
     <div class="container mt-5 mb-5 ">
 
@@ -264,7 +267,7 @@ if (isset($_POST['submit'])) {
 
     <!-- Copyright -->
     <div class="text-center p-1 " style="background-color:var(--Rouge); ">
-        <small class="text-uppercase text-white  ">©Blood Donation 2022</small>
+        <small class="text-uppercase text-white  ">©cours sup 2022</small>
     </div>
     <!-- Copyright -->
     </footer>

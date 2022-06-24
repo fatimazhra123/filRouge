@@ -43,22 +43,22 @@ form.contact{
   
 }
 .ajouter {
-    background-color: #1456A3;
+    background-color: #1f2669;
     width: 150px;
     height: 35px;
 }
 
 .title {
-    color: #1456A3;
+    color: #1f2669;
 }
 
 .head {
-    border-color: #1456A3 !important;
+    border-color: #1f2669!important;
     
 }
 
 thead {
-    background-color: #1456A3;
+    background-color:#1f2669#1456A3;
     /* border: 5px solid black; */
     border-radius: 10px;
 }

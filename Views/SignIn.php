@@ -183,6 +183,6 @@
     } else if ($_SESSION['role'] == 'client') {
      
        
-        header ("location:Profile");
+        header ("location:AnnonceStud");
     }
 }

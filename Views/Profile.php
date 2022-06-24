@@ -45,10 +45,7 @@
     <div class="bienvenue w-50">
         <div class="border border-dark mb-2 p-2 rounded d-flex flex-column align-items-center"style=  "background: #B0C8E2;">
             <h1>Bonjour <?= $_SESSION['Username']; ?></h1>
-            <div>
-                <button type="button" class="btn btn border-border-dark"><a href="AnnonceStud" class="text-white">Passer dans plateforme cours soutien</a></button>
-               
-            </div>
+           
         </div>
         <div class="border border-dark mb-2 p-2 rounded">
             <h2>Détails du compte</h2>

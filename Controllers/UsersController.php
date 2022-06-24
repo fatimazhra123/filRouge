@@ -31,6 +31,7 @@ class UsersController{
 
 
 
+
     public function checkUser($email,$mot){
         $inputEmail = FormValidation::emailValidation($email);
         $inputPassword = FormValidation::passwordValidation($mot);
@@ -51,11 +52,13 @@ class UsersController{
 					$_SESSION['role'] = 'admin';
                     
                     header ("location:dashboard");
-				} else {
+				}else if( $Log['role'] === 'prof') {
+					$_SESSION['role'] = 'prof';
+                    header ("location:Annonce");
+				}
+				else {
 					$_SESSION['role'] = 'client';
-					
-                	
-                    header ("location:Profile");
+                    header ("location:AnnonceStud");
 				}
 				
 			} else {

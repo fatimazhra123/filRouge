@@ -26,64 +26,11 @@
 
 <body class="index-page">
 
-    <!-- start navbar -->
-    <nav class="navbar  navbar-fixed-top navbar-expand-lg  shadow  bg-body rounded py-1" style="backdrop-filter: blur(14px);">
-        <div class="container-fluid">
-            <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" style="width: 80px;" alt="le logo" class="logo-navbar">
-            <button class="navbar-toggler " style="color:black;" type="button" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="color:black;"></span>
-            </button>
-            <div class="collapse navbar-collapse">
-                <div class="navbar-collapse-header">
-
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="bi bi-list"></i></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Annonce" class="nav-link nav-link-icon  ml-3 nav-link-hover">Annonce-prof</a>
-                </li>
-                <li class="nav-item">
-                    <a href="AnnonceStud" class="nav-link nav-link-icon  ml-3 nav-link-hover">Réserver</a>
-                </li>
-                <li class="nav-item">
-                    <a href="offer" class="nav-link nav-link-icon  ml-3 mr-3 nav-link-hover">Inscription</a>
-                </li>
-               
-                <li class="nav-item">
-                    <a href="contact" class="nav-link nav-link-icon  ml-2 mr-5 nav-link-hover">Contact </a>
-                </li>
-            </ul>
-            <div class="dropdown show text-warning fs-6 bg-white">
-                <a class="btn btn- dropdown-toggle text-warning fs-6 bg-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    INSCRIPTION
-                </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item text-warning fs-6" href="SignIn">Sign-in</a>
-                    <a class="dropdown-item text-warning fs-6" href="home-cours">Home</a>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </nav>
+     <!-- start navbar -->
+ <?php require_once "Includes/navbar.php"; ?>
     <!-- end nav -->
+    
+  
 
     <div class="container mt-5 mb-5 border border-dark ">
 
@@ -305,7 +252,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-1 " style="background-color:var(--Rouge); ">
-        <small class="text-uppercase text-white  ">©Blood Donation 2022</small>
+        <small class="text-uppercase text-white  ">©cours sup 2022</small>
     </div>
     <!-- Copyright -->
     </footer>

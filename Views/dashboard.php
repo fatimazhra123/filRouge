@@ -29,7 +29,7 @@ if ($_SESSION['logged'] == true && $_SESSION['role'] == 'admin') {
 
 
 <body>
-  <?php require_once "Includes/navbar.php"; ?>
+  <?php require_once "Includes/navDash.php"; ?>
   <?php require_once "Includes/sidebar.php"; ?>
 
   <div class="container col-10 d-flex-">

@@ -26,9 +26,10 @@
 
 
 <body class="contact index-page">
-  <!-- start navbar -->
-  <?php require_once "Includes/navbardestroy.php"; ?>
-  <!-- end nav -->
+    <!-- start navbar -->
+    <?php require_once "Includes/navbar.php"; ?>
+    <!-- end nav -->
+    
 
   <section class="hero-wrap hero-wrap-2  p-4" style="background-image: url('./images/bg_2.jpg');">
     <div class="overlay"></div>
@@ -74,7 +75,7 @@
               <div class="form-group  border border-dark">
                 <textarea name="Message" type="text" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
-              <div class=" text-center bg-light border border-dark shadow" >
+              <div class=" text-center bg-light border border-dark shadow">
                 <button name="submit" type="submit" value="Send Message" class="btn py-3 px-5 " type="button" class="btn btn-primary nav-link-hover  text-dark ">Envoyer</button>
               </div>
             </form>
@@ -98,25 +99,26 @@
         <div class="col-md-3 d-flex">
           <div class="bg-light align-self-stretch box p-4 text-center">
             <h3 class="mb-4">Address</h3>
-            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+            <p>Rue FIRDAOUS ,MIDELTE ,MAROC</p>
           </div>
         </div>
         <div class="col-md-3 d-flex">
           <div class="bg-light align-self-stretch box p-4 text-center">
             <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+            <p><a href="tel://1234567920">06-21-40-00-00</a></p>
           </div>
         </div>
         <div class="col-md-3 d-flex">
           <div class="bg-light align-self-stretch box p-4 text-center">
             <h3 class="mb-4">Email Address</h3>
-            <p><a href="mailto:info@yoursite.com">yoursite.com</a></p>
+            <p><a href="mailto:info@yoursite.com">
+                Fati@gmail.com</a></p>
           </div>
         </div>
         <div class="col-md-3 d-flex">
           <div class="bg-light align-self-stretch box p-4 text-center">
             <h3 class="mb-4">Email Website</h3>
-            <p><a href="mailto:info@yoursite.com">yoursite.com</a></p>
+            <p><a href="mailto:info@yoursite.com">cours-sup@gmail.com</a></p>
           </div>
         </div>
 
@@ -204,7 +206,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-1 " style="background-color:var(--Rouge); ">
-    <small class="text-uppercase text-white  ">©Blood Donation 2022</small>
+    <small class="text-uppercase text-white  ">©cours sup 2022</small>
   </div>
   <!-- Copyright -->
   </footer>
@@ -225,9 +227,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </body>
 

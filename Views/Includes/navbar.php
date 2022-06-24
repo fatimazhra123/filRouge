@@ -1,36 +1,42 @@
-<section class="navbar fixed-top  ">
-    <div class=" container-fluid">
+   <!-- start navbar -->
+   <nav class="navbar  navbar-fixed-top navbar-expand-lg  shadow  bg-body rounded py-1  " style="backdrop-filter: blur(14px);">
+        <div class="container-fluid">
+            <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" style="width: 80px;" alt="le logo" class="logo-navbar">
+            <button class="navbar-toggler " style="color:black;" type="button" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:black;"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-collapse-header">
 
-        <div class="nvb d-flex md-1 ">
-            <img src="Views/Assets/image/ccours_supplémentaires-removebg-preview.png" alt="" style="width:66px;">
-            <i class="fa-solid fa-bars humberguer text-dark ms-1"></i>
-            <form method="post"  class="input-icons " style=" align-items:start; color:black;border:black">
-                <button name="recherch" class="border-0" type="submit"><i class="fa-solid fa-magnifying-glass icon"></i></button>
-                <input class="input-field search form-control w-100 me-2 rounded-pill justify-self-start text-"   name="recherche"  type="text" placeholder="Search" aria-label="Search">
-                
-            </form>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-info" aria-controls="navbar-info" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="bi bi-list"></i></i></span>
+          </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="homecours" class="nav-link nav-link-icon  nav-link-hover">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Apropos" class="nav-link nav-link-icon  ml-3 nav-link-hover">Apropos</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a href="contact" class="nav-link nav-link-icon  ml-2 mr-5 nav-link-hover">Contact </a>
+                </li>
+            </ul>
+
+            
+
+            </div>
         </div>
-
-        
-       
-
-      
-    <ul class="navbar-nav d-flex align-items-center  justify-content-between  ">
-        
-		    <div class="d-flex flex-row ">
-            <li class="nav-item"><button class="btn bnt-hover  border-dark d-flex align-items-center text-dark mt-0"><a href="Deconnexion" class="text-dark"><i class="fas fa-sign-out"></i> <h6>Se déconnecter</h6></a></button></li>
-            <li class="nav-item">
-		    <button href="#" class="btn bnt-hover d-flex align-items-center text-dark mt-0"><h4><span></h4> </span></button>
-            <li class="nav-item row" ><button class="btn bnt-hover  border-dark d-flex align-items-center text-dark mt-0"><a href="admin" class="text-dark">  <a  href="admin"> <h6>Admin</h6> </a><h6><?php  echo $_SESSION['Username']; ?></h6><img src="Views/Assets/image/businesswoman.png" alt="image" style="width:55px;height:45px"></button></li>
-
-	     	</li> 
-
-
-               
-
-		       
-		    </div>
-		   
-		
-    </ul>
-</section>
+        </div>
+    </nav>
+    <!-- end nav -->

@@ -30,9 +30,8 @@
 
 <body class="réserve index-page">
 
-    <!-- start navbar -->
-    <?php require_once "Includes/navbardestroy.php"; ?>
-    
+     <!-- start navbar -->
+     <?php require_once "Includes/navbardestroy.php"; ?>
     <!-- end nav -->
     <div class="bg-white pt-5 d-flex flex-column align-items-center">
 
@@ -40,7 +39,8 @@
             <h2>Bienvenue,l'étudiant</h2>
             <div>
                 <a  href="offer"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-plus"></i></i>INSCRIPTION</button></a>
-                <a href="dashboard " type="button" class="btn btn-secondary "><i class="fas fa-sign-out"></i> Go To dashboard</a>
+               
+                
             </div>
         </div>
 
